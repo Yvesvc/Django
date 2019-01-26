@@ -1,0 +1,68 @@
+
+{% extends 'home/header.html' %}
+
+{% block title %} Altijd Prijs - Producten {% endblock %}
+{% block metadescription %}
+Deze pagina van Altijd Prijs weergeeft de goedkoopste prijzen die gevonden werden op basis van de zoekopdracht, ook wordt een afbeelding getoond,
+alsook de link naar de website.
+De volgende sites worden doorzocht: Bol, Amazon, Coolblue, Aliexpress, Ebay.{% endblock %}
+
+{%block content%}
+
+<form method= "post" id='newsearchtermtop' > <!-- Button to search again -->
+    {% csrf_token %}
+    {{ form }}
+    <button type = 'submit' class='button'> Probeer een nieuwe zoekterm </button>
+</form>
+
+<div id = positionblockofresultsandnewsearchterm>
+{% if len_list_all_sorted == 0 %} <!-- Displayed message if no results -->
+  <p id = 'geen_results'>Helaas, geen zoek resultaten!</p>
+{%else %}
+
+  {% for item in list_all_sorted %} <!-- Loop through all products -->
+  <div class='prettyresults'>
+       <h3 class = "prettytitle">{{item.title}}</h3> <!-- Display title of product -->
+     {% for key, value in item.items %}
+       {% if key == 'image' %} <!-- Display image -->
+       <img class = "prettyimage" src='{{value}}' alt = '{{item.title}}'>
+        {% elif key == 'price' %} <!-- Display price -->
+         <h4 class = "prettyprice">{{value}} €</h4>
+      {% elif key == 'link' %} <!-- Display link -->
+        {% if 'www.bol.com' in value %}
+        <a class = "prettylink" href='{{value}}'>Bekijk dit product op Bol.com</a>
+        {% elif 'ebay.be' in value %}
+          <div class = 'prettylink'>
+          <a href='{{value}}'>Bekijk dit product op Ebay.be</a>
+          <p id = 'ebay2ehands' style = 'position:absolute;left:48px;top:6px;color:red;font-size:15px' > Dit product is 2e hands </p> <!-- Warning that this is 2nd hand -->
+          </div>
+        {% elif 'coolblue.be' in value %}
+          <a class = "prettylink" href='{{value}}'>Bekijk dit product op Coolblue.be</a>
+          {% elif 'aliexpress.com' in value %}
+            <a class = "prettylink" id='prettylinkali' href='{{value}}'>Bekijk dit product op Aliexpress.com</a>
+        {%else %}
+         <a class = "prettylink" href='{{value}}'>link text</a>
+        {%endif%}
+       {% endif %}
+     {% endfor %}
+     <br>
+   </div>
+   {% endfor %}
+{% endif %}
+<br><br><br><br><br><br><br>
+
+
+<form method= "post">
+    {% csrf_token %}
+    {{ form }}
+    <button type = 'submit' class='button'> Probeer een nieuwe zoekterm </button>
+</form>
+
+
+<br><br><br><br><br><br><br>
+
+<div id="popup" style='position:fixed'> <!--Needed otherwise position under control of parent style -->
+Steun ons met een <a href = 'http://www.paypal.me/altijdprijs'> Paypal storting! </a>
+  </div>
+</div>
+{% endblock %}
