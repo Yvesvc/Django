@@ -14,6 +14,8 @@ If the user, for example, is interested in buying Harry Potter and the Philosoph
 
 ![result](https://user-images.githubusercontent.com/24839014/51786520-bbf01e00-2165-11e9-94cb-db7bbbf6ae79.png)
 
+The products are either retrieved using the site's API or using BeatifulSoup (a Python library for webscraping)
+
 Following, if the user is interested in a certain product, he or she simply clicks on the link and is automatically taken to the product page of the website from where the product is coming from.
 
 
