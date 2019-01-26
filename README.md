@@ -17,4 +17,4 @@ If the user, for example, is interested in buying Harry Potter and the Philosoph
 Following, if the user is interested in a certain product, he or she simply clicks on the link and is automatically taken to the product page of the website from where the product is coming from.
 
 
-In the Home and About directories, I included the Python, CSS, and HTML files this site was based on. General files related to the Django framework, such as Settings.py, are not included.
+In the Home and About directories, I included the Python, CSS, and HTML files. General files related to the Django framework, such as Settings.py, are not included.
