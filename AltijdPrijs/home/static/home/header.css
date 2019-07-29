@@ -1,0 +1,319 @@
+
+/* BODY */
+
+body {background-color:#ffffff;
+background-image: linear-gradient(rgba(179, 204, 255,.3) 2px, transparent 2px),
+linear-gradient(90deg, rgba(179, 204, 255,.3) 2px, transparent 2px),
+linear-gradient(rgba(179, 204, 255,.3) 1px, transparent 1px),
+linear-gradient(90deg, rgba(179, 204, 255,.3) 1px, transparent 1px);
+background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+}
+
+
+/* HEADER */
+
+#maintitle
+{background-color:coral;
+  font-style: "Georgia";
+}
+
+
+.columnheaderleft {
+  float: left;
+  max-width: 60px;
+  width:20%;
+}
+
+
+/* Activated when screen is smallest */
+@media only screen and (max-width: 650px) {
+  .columnheaderright {
+    float: left;
+    width:20%;
+    margin-left:45px
+  }
+}
+
+/* Activated when screen is small */
+@media only screen and (min-width: 650px) {
+  .columnheaderright {
+    float: left;
+    width:20%;
+    margin-left:140px
+  }
+}
+
+/* Activated when screen is normal */
+@media only screen and (min-width: 1270px) {
+  .columnheaderright {
+    float: left;
+    width:20%;
+    margin-left:200px
+  }
+}
+
+
+/* Clear floats after the columns */
+.rowheader:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#naarwatbjenjeopzoek {
+  font-size: 25pt;
+  font-style: 'Georgia';
+}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  #naarwatbjenjeopzoek  {
+    font-size:5vw;
+  }
+}
+
+
+#querybox {
+  position: fixed; /* or absolute */
+  top: 30%;
+  left: 40%;
+}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  #querybox {
+    position: fixed; /* or absolute */
+    top: 30%;
+    left: 20%;
+  }
+}
+
+.footer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+/*  RESULT   */
+#newsearchtermtop {
+  position:fixed;
+  top:20%;
+  left: 60%;
+}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  #newsearchtermtop  {
+  position:absolute;
+  top:10px;
+  }
+}
+
+/* Smal screen size */
+@media only screen and (max-width: 1270px) {
+  #newsearchtermtop  {
+  position:absolute;
+  top:70px;
+  }
+}
+
+.button { background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+button:hover {opacity: 1}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  .button  {
+  padding: 16px 32px;
+  font-size: 8pt;
+  }
+}
+
+
+
+#geen_results {
+  position:absolute;
+  top: 22%;
+  font-size: 15pt;
+  font-style: 'Georgia';
+}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  #geen_results  {
+    position:absolute;
+    top: 25%;
+    font-size: 15pt;
+    font-style: 'Georgia';
+  }
+}
+
+/*Small and normal screen */
+@media only screen and (min-width: 1200px) {
+  #positionblockofresultsandnewsearchterm {
+    position:absolute;
+    left:50px;
+  }
+}
+.prettyresults {
+  padding: 70px;
+  padding-bottom:100px;
+}
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  .prettyresults  {
+    padding-left: 10px;
+    padding-top:58px;
+    padding-bottom:100px;
+  }
+}
+
+
+
+.prettytitle {
+
+}
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  .prettytitle  {
+    font-size: 10pt;
+  }
+}
+.prettyimage {
+  position:absolute;
+  padding-top:0px;
+  width:120px;
+  height:150px;
+  left: 5px;
+}
+
+
+.prettylink {
+  position:absolute;
+  left: 150px;
+}
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  .prettylink  {
+    position:absolute;
+    left: 130px;
+    font-size: 10pt;
+  }
+}
+
+/* Smallest screen size and ali*/
+@media only screen and (max-width: 650px) {
+  #prettylinkali  {
+    font-size: 9pt;
+  }
+}
+
+.prettyprice {
+  position:absolute;
+  left: 150px;
+}
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  .prettyprice  {
+    position:absolute;
+    left: 130px;
+    font-size: 10pt;
+  }
+}
+
+/*normal screen size */
+@media only screen and (min-width: 200px) {
+  .prettyresults  {
+    padding-left: 30px;
+  }
+}
+
+#popup
+{
+  position:static;
+  background-color:LightGray;
+  font-size:20px;
+  width:300px;
+  height:30px;
+  border-radius: 25px;
+  opacity:0;//IE9, Firefox, Chrome, Opera, and Safari
+  filter:alpha(opacity=0);//IE8 and earlier
+  padding-top:40px;
+  bottom:160px;
+  right: 20%;
+  text-align:center;
+}
+
+/* Small screen size */
+@media only screen and (max-width: 1270px) {
+  #popup  {
+    padding-top:5px;
+    padding-bottom:0px;
+    left: 500px;
+    width:150px;
+    height:40px;
+    font-size: 9pt;
+  }
+}
+
+
+/* Smallest screen size */
+@media only screen and (max-width: 650px) {
+  #popup  {
+    bottom:35px;
+    padding-bottom: 0px;
+    padding-top:0px;
+    width:100px;
+    height:80px;
+    left: 60%;
+    font-size: 10pt;
+  }
+}
+
+
+/* ABOUT */
+
+.about {
+  font-style: "Georgia";
+  margin-left: auto;
+  margin-right: auto;
+  width: 25em;
+}
+
+.abouth {
+  font-size: 16pt;
+}
+
+@media only screen and (max-width: 650px) {
+  .abouth  {
+    font-size:14pt;
+  }
+}
+
+.aboutp {
+  padding-bottom: 30px;
+  font-size: 12pt;
+}
+
+@media only screen and (max-width: 650px) {
+  .aboutp  {
+    font-size:10pt;
+  }
+}

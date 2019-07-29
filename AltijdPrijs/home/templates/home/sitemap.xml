@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+   <url>
+
+      <loc>altijd-prijs.com</loc>
+      <!-- Afbeeldingen van logo -->
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/logo.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/logosmall.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/logosmallest.jpg</image:loc>
+      </image:image>
+      <!-- Afbeeldingen van online sites -->
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/onlinesites2.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/onlinesites2small.jpg</image:loc>
+      </image:image>
+      <image:image>
+        <image:loc>http://altijd-prijs.com/static/image/onlinesites2smallest.jpg</image:loc>
+      </image:image>
+   </url>
+
+   <url>
+
+     <loc>altijd-prijs.com/about</loc>
+
+   </url>
+</urlset>

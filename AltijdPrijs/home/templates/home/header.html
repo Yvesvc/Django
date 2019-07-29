@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block metadescription %}My Meta{% endblock %}">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>{% block title %}My title{% endblock %}</title>
+
+    {% load staticfiles %}
+    <link rel='stylesheet' href="{% static 'home/header.css' %}"> <!--loads the CSS File-->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> <!-- JQuery -->
+
+
+  </head>
+  <body>
+
+
+
+    <div class="rowheader">
+      <div class="columnheaderleft">
+        <a target="_blank" href="https://www.altijd-prijs.com"> <!--link naar homepage -->
+        <picture>
+        <source media="(min-width: 1270px)" srcset="{% static "image/logo.jpg" %}" alt ='Altijd Prijs logo'> <!-- for largest screen -->
+        <source media="(min-width: 650px)"  srcset="{% static "image/logosmall.jpg" %}" alt ='Altijd Prijs logo'> <!-- for middle-size screen -->
+        <img src="{% static "image/logosmallest.jpg" %}" alt="Altijd Prijs logo"> <!-- for smallest screen -->
+        </picture>
+      </a>
+      </div>
+        <div class="columnheaderright">
+          <picture>
+          <source media="(min-width: 1270px)" srcset="{% static "image/onlinesites2.jpg" %}" alt ='Logo Bol, Aliexpress, Amazon, Ebay, Coolblue'> <!-- for largest screen -->
+          <source media="(min-width: 650px)" srcset="{% static "image/onlinesites2small.jpg" %}" alt ='Logo Bol, Aliexpress, Amazon, Ebay, Coolblue' > <!-- for middle-size screen -->
+          <img src="{% static "image/onlinesites3smallest.jpg" %}" alt="IfItDoesntMatchAnyMedia" alt ='Logo Bol, Aliexpress, Amazon, Ebay, Coolblue'> <!-- for smallest screen -->
+          </picture>
+        </div>
+    </div >
+
+
+
+
+		   {% block content %}
+		   {% endblock %}
+
+
+
+    <div class="footer">
+        <a href="about" class="btn btn-lg btn-secondary">Over Altijd Prijs</a>
+    </div>
+
+<script src="{% static 'home/header.js' %}"></script>
+
+
+
+
+  </body>
+</html>

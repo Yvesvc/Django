@@ -1,0 +1,25 @@
+{% extends "home/header.html"%}
+
+
+{% block title %} Altijd Prijs - Homepagina {% endblock %}
+{% block metadescription %}
+Met Altijd Prijs kan je een product opzoeken en vervolgens wordt gezocht naar de goedkoopste prijzen
+van dit product op de volgende sites: Bol, Amazon, Aliexpress, Coolblue, Ebay. Je kan zoeken naar boeken, muziek, film
+, games, computer, speelgoed, kleren en andere artikelen.{% endblock %}
+
+{% block content %}
+
+
+<div id = 'querybox'>
+<p id ='naarwatbjenjeopzoek'> Naar wat ben je op zoek: </p>
+<form method= "post">
+    {% csrf_token %}
+    {{ form }}
+    <button type = 'submit' class= 'button' onclick="$('#loading').show();"> Zoek </button> <!-- onclick="$('#loading') enables loading message  -->
+</form>
+
+<div id="loading" style="display:none;"><img src="static/image/loading.gif" alt="" />Aan het zoeken naar de meest voordelige prijzen!</div> <!-- Displayed when clicked on button and thus loading results.html -->
+
+<p style ='position:absolute;left:5px;'> Tip: Specifieke zoekopdrachten helpen je gemakkelijker je product te vinden! </p>
+</div>
+{% endblock %}
